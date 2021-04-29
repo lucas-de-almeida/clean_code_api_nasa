@@ -29,6 +29,7 @@ void main() {
     when(datasource)
         .calls(#getSpaceMediaFromDate)
         .thenAnswer((_) async => tSpaceMediaModel);
+
     final result = await repository.getSpaceMediaFromDate(tDate);
 
     expect(result, Right(tSpaceMediaModel));
